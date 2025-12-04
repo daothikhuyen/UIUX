@@ -65,9 +65,9 @@ class ChoosedMoodScreen extends StatelessWidget {
                     
                     // Tiêu đề
                     const Text(
-                      'Choose the emotion that\nmake you feel',
+                      'Choose the emotion that make you feel',
                       style: TextStyle(
-                        fontSize: 28,
+                        fontSize: 24,
                         fontWeight: FontWeight.bold,
                         color: Colors.black,
                         height: 1.2,

@@ -53,19 +53,21 @@ class _UpdatePostScreenState extends State<UpdatePostScreen> {
                       children: [
                         const CustomAppBar(), 
                         const SizedBox(height: 30),
-                        const Text(
+                       Center(
+                        child:  const Text(
                           'Update your post',
                           style: TextStyle(
-                            fontSize: 30,
+                            fontSize: 24,
                             fontWeight: FontWeight.bold,
                             color: _kPrimaryTextColor,
                           ),
                         ),
+                       ),
                         const SizedBox(height: 8),
                         const Text(
                           'Add any words that describe how you feel today',
                           style: TextStyle(
-                            fontSize: 16,
+                            fontSize: 14,
                             color: _kSecondaryTextColor,
                           ),
                         ),

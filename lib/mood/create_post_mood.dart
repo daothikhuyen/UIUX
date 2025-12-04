@@ -56,7 +56,7 @@ class _AddNotesScreenState extends State<AddNotesScreen> {
                         const Text(
                           'Anything you want to add',
                           style: TextStyle(
-                            fontSize: 30,
+                            fontSize: 24,
                             fontWeight: FontWeight.bold,
                             color: _kPrimaryTextColor,
                           ),
@@ -65,7 +65,7 @@ class _AddNotesScreenState extends State<AddNotesScreen> {
                         const Text(
                           'Add any words that describe how you feel today',
                           style: TextStyle(
-                            fontSize: 16,
+                            fontSize: 14,
                             color: _kSecondaryTextColor,
                           ),
                         ),

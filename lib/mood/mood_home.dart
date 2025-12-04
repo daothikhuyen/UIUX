@@ -1,6 +1,7 @@
 // mood_screen.dart
 import 'package:finaluxui/mood/widgets/bottom_nav.dart';
 import 'package:flutter/material.dart';
+
 // 1. Import màn hình đích bạn vừa tạo
 import 'choose__moode.dart';
 
@@ -84,7 +85,7 @@ class _MoodScreenState extends State<MoodScreen> {
             const SizedBox(height: 40),
             const Text(
               "What is your mood now?",
-              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 30),
 
