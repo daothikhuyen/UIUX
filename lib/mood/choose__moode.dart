@@ -44,7 +44,6 @@ class EmotionPickerScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       // SỬ DỤNG MÀU NỀN MỚI
-      backgroundColor: _kBackgroundColor, 
       body: SafeArea(
         child: Column(
           children: [
@@ -188,9 +187,9 @@ class SearchBarWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+      padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 0),
       decoration: BoxDecoration(
-        color: const Color(0xFFF7F7F7), // Màu nền nhẹ
+        color: _kBackgroundColor, // Màu nền nhẹ
         // Radius full 30
         borderRadius: BorderRadius.circular(30), 
         // Thay thế border bằng BoxShadow
@@ -205,11 +204,11 @@ class SearchBarWidget extends StatelessWidget {
       ),
       child: TextField(
         decoration: InputDecoration(
-          hintText: 'Search',
-          hintStyle: TextStyle(color: Colors.grey.shade500),
+          // hintText: 'Search',
+          // hintStyle: TextStyle(color: ),
           border: InputBorder.none,
           prefixIcon: Icon(Icons.search, color: Colors.grey.shade500),
-          contentPadding: const EdgeInsets.symmetric(vertical: 10),
+          contentPadding: const EdgeInsets.symmetric(vertical: 5),
         ),
       ),
     );
@@ -307,7 +306,6 @@ class ContinueButton extends StatelessWidget {
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
         // Màu nền cho vùng nút
-        color: _kBackgroundColor, 
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(0.05),

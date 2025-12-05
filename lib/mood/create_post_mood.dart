@@ -58,7 +58,7 @@ class _AddNotesScreenState extends State<AddNotesScreen> {
                           style: TextStyle(
                             fontSize: 24,
                             fontWeight: FontWeight.bold,
-                            color: _kPrimaryTextColor,
+                            color: Colors.black,
                           ),
                         ),
                         const SizedBox(height: 8),
@@ -66,7 +66,7 @@ class _AddNotesScreenState extends State<AddNotesScreen> {
                           'Add any words that describe how you feel today',
                           style: TextStyle(
                             fontSize: 14,
-                            color: _kSecondaryTextColor,
+                            color: Colors.black,
                           ),
                         ),
                         const SizedBox(height: 30),
@@ -249,7 +249,7 @@ class RecordVoiceButton extends StatelessWidget {
         'Record your voice',
         style: TextStyle(
           fontSize: 16,
-          fontWeight: FontWeight.bold,
+          fontWeight: FontWeight.w600,
           color: _kPrimaryTextColor,
         ),
       ),
@@ -356,7 +356,7 @@ class SaveActionButtons extends StatelessWidget {
                 'Save',
                 style: TextStyle(
                   fontSize: 18,
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.w600,
                   color: Colors.white,
                 ),
               ),

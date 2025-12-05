@@ -2,6 +2,7 @@ import 'package:finaluxui/mood/widgets/bottom_nav.dart';
 import 'package:flutter/material.dart';
 
 import 'history_screen.dart';
+import 'video.dart';
 
 // --- CÁC HẰNG SỐ VÀ MÀU SẮC ---
 const Color _kPrimaryBlue = Color(0xFF4C7DFF);
@@ -144,7 +145,7 @@ class HomeHeader extends StatelessWidget {
                 'Thu, 10 Oct',
                 style: TextStyle(
                   fontSize: 14,
-                  fontWeight: FontWeight.w600,
+                  fontWeight: FontWeight.w500,
                   color: _kPrimaryTextColor,
                 ),
               ),
@@ -304,15 +305,26 @@ class CheckinHeaderAndActions extends StatelessWidget {
           "Today's check-in",
           style: TextStyle(
             fontSize: 20,
-            fontWeight: FontWeight.bold,
+            fontWeight: FontWeight.w500,
             color: _kPrimaryTextColor,
           ),
         ),
         // 2 Nút Action
        Row(
           children: [
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const VideoScreen(), // <--- CHUYỂN TRANG
+                  ),
+                );
+              },
+              child: const ActionButton(icon: Icons.videocam_outlined),
+            ),
             // Nút Video (không cần bọc nếu không có onTap)
-            const ActionButton(icon: Icons.videocam_outlined), 
+             
             const SizedBox(width: 15),
             
             // Bọc nút History bằng GestureDetector

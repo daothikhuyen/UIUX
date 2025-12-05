@@ -4,33 +4,19 @@ import 'package:flutter/material.dart';
 
 // 1. Import màn hình đích bạn vừa tạo
 import 'choose__moode.dart';
+import 'exercise_selector_screen.dart';
 
-class MoodScreen extends StatefulWidget {
-  const MoodScreen({super.key});
+class VideoScreen extends StatefulWidget {
+  const VideoScreen({super.key});
 
   @override
-  State<MoodScreen> createState() => _MoodScreenState();
+  State<VideoScreen> createState() => _VideoScreenState();
 }
 
-class _MoodScreenState extends State<MoodScreen> {
+class _VideoScreenState extends State<VideoScreen> {
   int selectedIndex = 2;
 
-  final moods = [
-    "Angry",
-    "Sad",
-    "Neutral",
-    "Happy",
-    "Excited",
-  ];
-
-  final icons = [
-    "😡",
-    "😔",
-    "🙂",
-    "😊",
-    "😍",
-  ];
-
+  
   // Hàm xử lý chuyển trang
   void _navigateToChooseMoodScreen(BuildContext context) {
     Navigator.push(
@@ -84,48 +70,13 @@ class _MoodScreenState extends State<MoodScreen> {
 
             const SizedBox(height: 40),
             const Text(
-              "What is your mood now?",
+              "Resource Library & Quick Exercises",
+              textAlign: TextAlign.center, // Căn giữa tiêu đề
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 30),
 
-            SizedBox(
-              height: 90,
-              child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemCount: icons.length,
-                itemBuilder: (context, index) {
-                  bool isSelected = selectedIndex == index;
-                  return GestureDetector(
-                    onTap: () {
-                      setState(() => selectedIndex = index);
-                    },
-                    child: AnimatedContainer(
-                      duration: const Duration(milliseconds: 200),
-                      margin: const EdgeInsets.symmetric(horizontal: 12),
-                      padding: const EdgeInsets.all(12),
-                      decoration: BoxDecoration(
-                        color: isSelected ? Colors.white : Colors.transparent,
-                        shape: BoxShape.circle,
-                        boxShadow: isSelected
-                            ? [const BoxShadow(color: Colors.black26, blurRadius: 6)]
-                            : [],
-                      ),
-                      child: Text(
-                        icons[index],
-                        style: const TextStyle(fontSize: 36),
-                      ),
-                    ),
-                  );
-                },
-              ),
-            ),
-
-            const SizedBox(height: 20),
-            Text(
-              moods[selectedIndex],
-              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
-            ),
+            
 
             const Spacer(),
 
@@ -134,7 +85,14 @@ class _MoodScreenState extends State<MoodScreen> {
               padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
               child: GestureDetector(
                 // Gọi hàm chuyển trang khi được chạm
-                onTap: () => _navigateToChooseMoodScreen(context), 
+                onTap: () {
+                   Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const ExerciseSelectorScreen(), 
+                    ),
+                  );
+                }, 
                 child: Container(
                   width: double.infinity,
                   padding: const EdgeInsets.symmetric(vertical: 13),

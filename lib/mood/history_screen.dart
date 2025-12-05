@@ -258,7 +258,7 @@ class HistoryAppBar extends StatelessWidget {
               children: const [
                 Text(
                   'Thu, 10 Oct',
-                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: _kPrimaryTextColor),
+                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: _kPrimaryTextColor),
                 ),
                 SizedBox(width: 4),
                 Icon(Icons.calendar_today, size: 14, color: _kPrimaryTextColor),
